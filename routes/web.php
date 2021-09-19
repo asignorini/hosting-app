@@ -32,7 +32,9 @@ Route::group(['prefix' => 'admin'], function() {
     Route::group(['prefix' => 'posts'], function() {
         Route::get('/create', [ArticleController::class, 'create'])->name('admin.posts.create');
         Route::post('/store', [ArticleController::class, 'store'])->name('admin.posts.store');
-        Route::get('/edit', [ArticleController::class, 'edit'])->name('admin.posts.edit');
+        Route::get('/edit/{id}', [ArticleController::class, 'edit'])->name('admin.posts.edit');
+        Route::post('/update/{id}', [ArticleController::class, 'update'])->name('admin.posts.update');
+        Route::delete('/destroy/{id}', [ArticleController::class, 'destroy'])->name('admin.posts.destroy');
     });
 });
 

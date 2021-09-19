@@ -11,18 +11,41 @@ class ArticleController extends Controller
         return view('admin.posts.create');
     }
 
+    public function edit($id) {
+        $article = Article::find($id);
+        return view('admin.posts.edit', ['article' => $article]);
+    }
+
     public function store(Request $request) {
-        Article::create([
-            'title'             => $request->input('title'),
-            'short_description' => $request->input('description'),
-            'text'              => $request->input('article-text'),
-            'user_id'           => 1 //TODO: ingresar el id del usuario logueado
-        ]);
+        return $this->savePost($request, false);
+    }
+
+    public function update(Request $request, $id) {
+        return $this->savePost($request, $id);
+    }
+
+    public function savePost($request, $id) {
+        if($id) {
+            $article = Article::find($id);
+        } else {
+            $article = new Article();
+        } 
         //TODO: validar los datos que llegan
+        $article->title = $request->input('title');
+        $article->short_description = $request->input('description');
+        $article->text = $request->input('article-text');
+        $article->user_id = 1; //TODO: ingresar usuario logueado
+
+        $article->save();
+        
         return redirect()->route('admin.index');
     }
 
-    public function edit() {
-        return view('admin.posts.edit');
+    public function destroy($id) {
+        $article = Article::find($id);
+        $article->delete();
+        return redirect()->route('admin.index');
     }
+
+    
 }

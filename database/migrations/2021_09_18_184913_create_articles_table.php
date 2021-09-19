@@ -18,7 +18,7 @@ class CreateArticlesTable extends Migration
             $table->timestamps();
             $table->string('title', 100);
             $table->string('short_description', 200);
-            $table->string('text');
+            $table->string('text', 2500);
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
         });

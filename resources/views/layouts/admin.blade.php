@@ -28,7 +28,7 @@
                         <a class="nav-link" href="{{ route('admin.profile') }}">Perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.create_post') }}">Nuevo Post</a>
+                        <a class="nav-link" href="{{ route('admin.posts.create') }}">Nuevo Post</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Logout</a>

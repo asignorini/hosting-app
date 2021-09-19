@@ -3,11 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use App\Models\Article;
 
 class AdminController extends Controller
 {
     public function index() {
-        return view('admin.index');
+        $articles = Article::all();
+
+        return view('admin.index', [
+            'articles' => $articles
+        ]);
     }
 
     public function login() {
@@ -18,15 +24,8 @@ class AdminController extends Controller
         return view('admin.profile');
     }
 
-    public function edit_profile() {
-        return view('admin.edit-profile');
+    public function edit() {
+        return view('admin.edit');
     }
 
-    public function create_post() {
-        return view('admin.abm-posts.create');
-    }
-
-    public function edit_post() {
-        return view('admin.abm-posts.edit');
-    }
 }

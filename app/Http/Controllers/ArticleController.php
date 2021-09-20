@@ -12,7 +12,7 @@ class ArticleController extends Controller
     }
 
     public function edit($id) {
-        $article = Article::find($id);
+        $article = Article::findOrFail($id);
         return view('admin.posts.edit', ['article' => $article]);
     }
 
@@ -26,7 +26,7 @@ class ArticleController extends Controller
 
     public function savePost($request, $id) {
         if($id) {
-            $article = Article::find($id);
+            $article = Article::findOrFail($id);
         } else {
             $article = new Article();
         } 
@@ -42,7 +42,7 @@ class ArticleController extends Controller
     }
 
     public function destroy($id) {
-        $article = Article::find($id);
+        $article = Article::findOrFail($id);
         $article->delete();
         return redirect()->route('admin.index');
     }

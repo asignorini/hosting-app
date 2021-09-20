@@ -5,14 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use App\Models\Article;
+use App\Models\Category;
 
 class AdminController extends Controller
 {
     public function index() {
         $articles = Article::all();
+        $categories = Category::all();
 
         return view('admin.index', [
-            'articles' => $articles
+            'articles' => $articles,
+            'categories' => $categories
         ]);
     }
 

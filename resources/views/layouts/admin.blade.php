@@ -38,9 +38,9 @@
         </nav>
     </header>
 
-    <div class="container">
+    <main class="container">
         @yield('content')
-    </div>
+    </main>
 
     <footer class="bg-dark container-fluid">
         <h2>footer</h2>

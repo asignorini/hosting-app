@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h2>Index del sitio</h2>
+<section>
+    <h2>Index del sitio</h2>
+</section>
 @endsection

@@ -39,6 +39,8 @@ h1 {
     color: rgb(241 98 44);
 }
 
+/* HEADER */
+
 .index-header {
     background: url(../img/home.jpg) no-repeat;
     background-size: contain;
@@ -71,6 +73,8 @@ h1 {
     color: lightgrey;
 }
 
+/* FEATURES */
+
 .features {
     padding-bottom: 5rem;
 }
@@ -88,4 +92,24 @@ h1 {
 
 .features-subtitle {
     font-weight: 600;
+}
+
+/* PLANS */
+
+.plan-price {
+    color: orangered;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.dolar-price {
+    font-size: 1rem;
+}
+
+.plan-card {
+    padding: 40px;
+    box-shadow: 0 8px 8px -1px rgb(0 0 0 / 15%);
+    border-radius: 3px;
+    border: 1px solid #ebebeb;
 }

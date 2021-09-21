@@ -9,7 +9,7 @@
                     <h2 class="header-title mb-4">El mejor <span class="d-block">Hosting Web</span></h2>
                 </li>
                 <li>
-                    <p class="header-subtitle">Comienza tu experiencia con nuestra promoción inicial de <strong><del>$500</del> $400/mes*</strong></p>
+                    <p class="header-subtitle">Comienza tu experiencia con nuestra promoción inicial de <strong><del>$800</del> $400/mes*</strong></p>
                 </li>
                 <li>
                     <p class="mb-4">Todo lo que necesitas para el manejo y alojamiento de tu sitio, en un solo lugar.</p>
@@ -89,8 +89,112 @@
                 </li>
             </ul>
         </li>
-        <li class="row">
-
+        <li class="row justify-content-center">
+            <div class="col-lg-4">
+                <ul class="plan-card">
+                    <li class="text-center mb-3">
+                        <h4 class="mb-0">Standard Hosting</h4>
+                        <small>En oferta - Ahórrate 50%</small>
+                    </li>
+                    <li class="text-center mb-4">
+                        <p class="plan-price"><span class="dolar-price">$</span>400</p>
+                        <p class="text-muted">/por mes</p>
+                    </li>
+                    <li>
+                        <button class="btn btn-call-to-action w-100">Empieza aquí</button>
+                    </li>
+                    <li>
+                        <ul class="pl-0 pt-4">
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check mr-3"></i>
+                                <p class="mb-0">Hasta 10 sitios</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check mr-3"></i>
+                                <p class="mb-0">Hasta 10 sitios</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check mr-3"></i>
+                                <p class="mb-0">Hasta 10 sitios</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check mr-3"></i>
+                                <p class="mb-0">Hasta 10 sitios</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <ul class="plan-card">
+                    <li class="text-center mb-3">
+                        <h4 class="mb-0">Advance Hosting</h4>
+                        <small>En oferta - Ahórrate 50%</small>
+                    </li>
+                    <li class="text-center mb-4"">
+                        <p class="plan-price"><span class="dolar-price">$</span>700</p>
+                        <p class="text-muted">/por mes</p>
+                    </li>
+                    <li>
+                        <button class="btn btn-call-to-action w-100">Empieza aquí</button>
+                    </li>
+                    <li>
+                        <ul class="pl-0 pt-4">
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check mr-3"></i>
+                                <p class="mb-0">Hasta 25 sitios</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check mr-3"></i>
+                                <p class="mb-0">Hasta 10 sitios</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check mr-3"></i>
+                                <p class="mb-0">Hasta 10 sitios</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check mr-3"></i>
+                                <p class="mb-0">Hasta 10 sitios</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <ul class="plan-card">
+                    <li class="text-center mb-3">
+                        <h4 class="mb-0">Unlimited Hosting</h4>
+                        <small>En oferta - Ahórrate 50%</small>
+                    </li>
+                    <li class="text-center mb-4">
+                        <p class="plan-price"><span class="dolar-price">$</span>1050</p>
+                        <p class="text-muted">/por mes</p>
+                    </li>
+                    <li>
+                        <button class="btn btn-call-to-action w-100">Empieza aquí</button>
+                    </li>
+                    <li>
+                        <ul class="pl-0 pt-4">
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check mr-3"></i>
+                                <p class="mb-0">Sitios ilimitados</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check mr-3"></i>
+                                <p class="mb-0">Hasta 10 sitios</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check mr-3"></i>
+                                <p class="mb-0">Hasta 10 sitios</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fas fa-check mr-3"></i>
+                                <p class="mb-0">Hasta 10 sitios</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </li>
     </ul>
 </section>

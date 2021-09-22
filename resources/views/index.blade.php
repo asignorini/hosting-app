@@ -19,7 +19,7 @@
         </div>
     </div>
 </section>
-<section class="features">
+<section class="section-padding-top">
     <div class="container">
         <div class="row">
             <ul class="col text-center mb-5">
@@ -77,7 +77,7 @@
         </div>
     </div>
 </section>
-<section class="plans">
+<section class="section-padding-top">
     <ul class="container">
         <li class="row">
             <ul class="col text-center mb-5">
@@ -132,7 +132,7 @@
                         <small>En oferta - Ahórrate 50%</small>
                     </li>
                     <li class="text-center mb-4"">
-                        <p class="plan-price"><span class="dolar-price">$</span>700</p>
+                        <p class=" plan-price"><span class="dolar-price">$</span>700</p>
                         <p class="text-muted">/por mes</p>
                     </li>
                     <li>
@@ -198,7 +198,38 @@
         </li>
     </ul>
 </section>
-<section class="offer">
-
+<section class="section-padding-top newsletter">
+    <ul class="container form-area">
+        <li class="offset-md-2 col-md-8 text-center mb-5">
+            <h3 class="h3-title">Empieza hoy!</h3>
+            <p>Puedes ponerte en contacto con nosotros para cualquier consulta relacionada con el alojamiento web. Con gusto te ayudaremos!</p>
+        </li>
+        <li class="offset-md-3 col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tus datos con nadie.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Nombre</label>
+                    <input type="text" class="form-control" id="exampleInputName1">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Envienme novedades sobre sus productos</label>
+                </div>
+                <button type="submit" class="btn btn-call-to-action w-100 py-3">Quiero que me contacten!</button>
+            </form>
+        </li>
+        <li class="offset-md-4 col-md-4 text-center mt-5">
+            <p>Aceptamos</p>
+            <ul class="d-flex justify-content-center p-0">
+                <li><i class="fab fa-cc-visa payments"></i></li>
+                <li><i class="fab fa-cc-paypal payments"></i></li>
+                <li><i class="fab fa-cc-amex payments"></i></li>
+            </ul>
+        </li>
+    </ul>
 </section>
 @endsection

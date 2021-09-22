@@ -47,8 +47,17 @@
         @yield('content')
     </main>
 
-    <footer class="bg-dark container-fluid">
-        <h2>footer</h2>
+    <footer>
+        <div class="container">
+            <ul class="row">
+                <li class="col text-center">
+                    <p class="pb-5 border-bottom border-light paragraph">Alojando con orgullo más de 800.000 sitios web desde 2000</p>
+                </li>
+                <li>
+
+                </li>
+            </ul>
+        </div>
     </footer>
 
 

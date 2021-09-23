@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ url('css/styles.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
@@ -49,12 +49,39 @@
 
     <footer>
         <div class="container">
-            <ul class="row">
-                <li class="col text-center">
+            <ul class="row mb-0 p-0">
+                <li class="col-12 text-center mb-5">
                     <p class="pb-5 border-bottom border-light paragraph">Alojando con orgullo más de 800.000 sitios web desde 2000</p>
                 </li>
-                <li>
+                <li class="col-md-4 text-right">
+                    <ul class="p-0 pr-5 border-right">
+                        <li>
+                            <p>Portales y Comercios Electrónicos</p>
+                        </li>
+                        <li>
+                            <p>Alessandro Signorini</p>
+                        </li>
+                        <li>
+                            <p>Primer Parcial</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="col-md-4 text-center">
+                    <a href="{{ url('/') }}"><img src="{{ url('img/hostingar-logo.png') }}" alt="logotipo de Hostingar"></a>
+                </li>
+                <li class="col-md-4">
+                    <ul class="p-0 pl-5 border-left">
+                        <li class="mb-3">
+                            <a href="{{ route('blog') }}">Blog</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="{{ route('contact') }}">Contacto</a>
 
+                        </li>
+                        <li class="mb-3">
+                            <a href="{{ route('login') }}">Admin</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>

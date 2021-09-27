@@ -23,7 +23,7 @@
                 <th scope="row">{{$article->article_id}}</th>
                 <td>{{$article->article_title}}</td>
                 <td>{{$article->user_id}}</td>
-                <td>{{$categories->sole('category_id', $article->category_id)->category_name}}</td>
+                <td>{{$article->category->category_name}}</td>
                 <td>{{$article->created_at}}</td>
                 <td>
                     <a href="{{ route('admin.posts.edit', ['id' => $article->article_id]) }}" class="btn btn-warning">Modificar</a>

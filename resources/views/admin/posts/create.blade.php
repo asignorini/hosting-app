@@ -19,6 +19,17 @@
       <textarea class="form-control" id="article-text" rows="10" placeholder="Escribe aquí el contenido del articulo nuevo..." name="article-text"></textarea>
     </div>
     <div class="form-group">
+      <label for="article-category">Categoría</label>
+      <select name="article_category" id="article_category" class="form-control">
+        <option value="">Elije una categoría</option>
+        @foreach($categories as $category)
+        <option value="{{ $category->category_id }}">
+          {{ $category->category_name }}
+        </option>
+        @endforeach
+      </select>
+    </div>
+    <div class="form-group">
       <label for="article-image">Imagen del artículo</label>
       <input type="file" class="form-control-file" id="article-image">
     </div>

@@ -19,10 +19,6 @@ class CreateArticlesTable extends Migration
             $table->string('article_title', 100);
             $table->string('article_description', 200);
             $table->string('article_text', 2500);
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('user_id')->on('users');
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('category_id')->on('categories');
         });
     }
 

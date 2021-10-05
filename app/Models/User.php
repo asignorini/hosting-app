@@ -2,43 +2,20 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+// Requisitos de para una clase de Eloquent para usuarios para usar el servicio de autenticación de
+// Laravel:
+// 1. Heredar de la clase Illuminate\Foundation\Auth\User
+// 2. Implementar el trait Illuminate\Notifications\Notifiable
+// Una vez que tenemos la tabla y el modelo, tenemos que configurar la autenticación, yendo al archivo
+// de [config/auth.php].
+class Usuario extends \Illuminate\Foundation\Auth\User
 {
-    use HasApiTokens, HasFactory, Notifiable;
+//    use HasFactory;
+    use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var string[]
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    protected $table = "users";
+    protected $primaryKey = "user_id";
 }

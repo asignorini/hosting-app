@@ -17,11 +17,20 @@ class UserSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'user_id' => 1,
-            'email' => 'alessandro.signorini@davinci.edu.ar',
-            'password' => Hash::make('asdasd'),
-            'created_at' => date('Y-m-d H:i:s'),
-            'updated_at' => date('Y-m-d H:i:s'),
+            [
+                'user_id' => 1,
+                'email' => 'alessandro.signorini@davinci.edu.ar',
+                'password' => Hash::make('asdasd'),
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ],
+            [
+                'user_id' => 2,
+                'email' => 'otro@usuario.com',
+                'password' => Hash::make('asdasd'),
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ],
         ]);
     }
 }

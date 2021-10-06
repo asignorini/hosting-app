@@ -62,6 +62,11 @@
     </header>
 
     <main>
+        @if(Session::has('message.success'))
+        <div class="alert alert-success container mt-3 text-center">
+            {{ Session::get('message.success') }}
+        </div>
+        @endif
         @yield('content')
     </main>
 

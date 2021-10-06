@@ -12,21 +12,21 @@ class AuthController extends Controller
     }
 
     public function login(Request $request) {
-        // TODO: validar
-        $credentials = [
-            'email'     => $request->input('email'),
-            'password'  => $request->input('password')
-        ];
+        $credentials = $request->validate([
+            'email'     => ['required', 'email'],
+            'password'  => ['required'],
+        ]);
         if(!Auth::attempt($credentials)) {
             return redirect()->route('auth.formLogin')->withInput();
         }
-        return redirect()->route('admin.index'); //TODO: with('message.success', 'Inicio de sesión exitoso');
+        return redirect()->route('admin.index')
+        ->with('message.success', 'Bienvenido al panel de administracion.');
     }
 
     public function logout() {
         Auth::logout();
 
-        return redirect()->route('auth.formLogin');
-            //TODO: ->with('message.success', 'Sesión cerrada con éxito. ¡Te esperamos de nuevo!');
+        return redirect()->route('auth.formLogin')
+        ->with('message.success', 'Sesión cerrada con éxito. ¡Te esperamos de nuevo!');
     }
 }

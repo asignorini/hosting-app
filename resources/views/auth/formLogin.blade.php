@@ -12,11 +12,17 @@
                 @csrf
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" name="email" aria-describedby="emailHelpId">
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelpId" value="{{ old('email') }}">
+                    @error('email')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label for="password">Contraseña</label>
-                    <input type="password" class="form-control" name="password">
+                    <input type="password" class="form-control" name="password" id="password">
+                    @error('password')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror    
                 </div>
                 <button type="submit" class="btn btn-primary w-100">Ingresar</button>
             </form>

@@ -29,20 +29,30 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 // Admin Routes:
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', [AdminController::class, 'index'])->name('admin.index');
-    Route::get('/profile', [AdminController::class, 'profile'])->name('admin.profile');
-    Route::get('/edit', [AdminController::class, 'edit'])->name('admin.edit');
+    Route::get('/', [AdminController::class, 'index'])
+    ->name('admin.index')
+    ->middleware('auth');
+    Route::get('/profile', [AdminController::class, 'profile'])
+    ->name('admin.profile')
+    ->middleware('auth');
     Route::group(['prefix' => 'posts'], function () {
-        Route::get('/create', [ArticleController::class, 'create'])->name('admin.posts.create');
-        Route::post('/store', [ArticleController::class, 'store'])->name('admin.posts.store');
+        Route::get('/create', [ArticleController::class, 'create'])
+        ->name('admin.posts.create')
+        ->middleware('auth');
+        Route::post('/store', [ArticleController::class, 'store'])
+        ->name('admin.posts.store')
+        ->middleware('auth');
         Route::get('/edit/{id}', [ArticleController::class, 'edit'])
             ->name('admin.posts.edit')
-            ->whereNumber('id');
+            ->whereNumber('id')
+            ->middleware('auth');
         Route::post('/update/{id}', [ArticleController::class, 'update'])
             ->name('admin.posts.update')
-            ->whereNumber('id');
+            ->whereNumber('id')
+            ->middleware('auth');
         Route::delete('/destroy/{id}', [ArticleController::class, 'destroy'])
             ->name('admin.posts.destroy')
-            ->whereNumber('id');
+            ->whereNumber('id')
+            ->middleware('auth');
     });
 });

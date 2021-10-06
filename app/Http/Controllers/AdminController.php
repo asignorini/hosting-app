@@ -18,9 +18,4 @@ class AdminController extends Controller
     public function profile() {
         return view('admin.profile');
     }
-
-    public function edit() {
-        return view('admin.edit');
-    }
-
 }

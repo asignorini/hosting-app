@@ -26,6 +26,23 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
+                    @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.index') }}">Publicaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.profile') }}">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.posts.create') }}">Crear post</a>
+                    </li>
+                    <li class="nav-item">
+                        <form action="{{ route('auth.logout') }}" method="post">
+                            @csrf
+                            <button class="btn nav-link" type="submit">Cerrar Sesión | {{ Auth::user()->email}}</button>
+                        </form>
+                    </li>
+                    @elseguest
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/') }}">Home</a>
                     </li>
@@ -36,8 +53,9 @@
                         <a class="nav-link" href="{{ route('contact') }}">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('auth.formLogin') }}">Admin</a>
+                        <a class="nav-link" href="{{ route('auth.formLogin') }}">Ingresar</a>
                     </li>
+                    @endauth
                 </ul>
             </div>
         </nav>
@@ -76,17 +94,7 @@
                         </li>
                         <li class="mb-3">
                             <a href="{{ route('contact') }}">Contacto</a>
-
                         </li>
-                        @if(Auth::check())
-                        <li class="mb-3">
-                            <a href="{{ route('auth.formLogin') }}">Ingresar</a>
-                        </li>
-                       @else
-                        <li class="mb-3">
-                            <a href="{{ route('auth.logout') }}">Cerrar sesión ({{ Auth::user()->email }})</a>
-                        </li>
-                        @endif
                     </ul>
                 </li>
             </ul>

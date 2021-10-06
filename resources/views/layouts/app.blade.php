@@ -36,7 +36,7 @@
                         <a class="nav-link" href="{{ route('contact') }}">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Admin</a>
+                        <a class="nav-link" href="{{ route('auth.formLogin') }}">Admin</a>
                     </li>
                 </ul>
             </div>
@@ -78,9 +78,15 @@
                             <a href="{{ route('contact') }}">Contacto</a>
 
                         </li>
+                        @if(Auth::check())
                         <li class="mb-3">
-                            <a href="{{ route('login') }}">Admin</a>
+                            <a href="{{ route('auth.formLogin') }}">Ingresar</a>
                         </li>
+                       @else
+                        <li class="mb-3">
+                            <a href="{{ route('auth.logout') }}">Cerrar sesión ({{ Auth::user()->email }})</a>
+                        </li>
+                        @endif
                     </ul>
                 </li>
             </ul>

@@ -186,3 +186,10 @@ footer a {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+/**************CONTACT**************************/
+
+.form-login h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}

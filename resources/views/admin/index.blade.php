@@ -1,7 +1,7 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 
 @section('content')
-<section>
+<section class="container">
     <h2 class="mt-5 mb-3">Publicaciones del blog</h2>
 
     <a href="{{ route('admin.posts.create') }}" class="btn btn-primary my-3">Crear nuevo post</a>

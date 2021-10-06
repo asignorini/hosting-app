@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,31 +17,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Home Routes
-
+// Home Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/contacto', [HomeController::class, 'contact'])->name('contact');
-Route::get('/login', [HomeController::class, 'login'])->name('login');
 
-//Admin Routes:
+// Auth Routes
+Route::get('/formLogin', [AuthController::class, 'formLogin'])->name('auth.formLogin');
+Route::post('/login', [AuthController::class, 'login'])->name('auth.login');
+Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
-Route::group(['prefix' => 'admin'], function() {
+// Admin Routes:
+Route::group(['prefix' => 'admin'], function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
     Route::get('/profile', [AdminController::class, 'profile'])->name('admin.profile');
     Route::get('/edit', [AdminController::class, 'edit'])->name('admin.edit');
-    Route::group(['prefix' => 'posts'], function() {
+    Route::group(['prefix' => 'posts'], function () {
         Route::get('/create', [ArticleController::class, 'create'])->name('admin.posts.create');
         Route::post('/store', [ArticleController::class, 'store'])->name('admin.posts.store');
         Route::get('/edit/{id}', [ArticleController::class, 'edit'])
-        ->name('admin.posts.edit')
-        ->whereNumber('id');
+            ->name('admin.posts.edit')
+            ->whereNumber('id');
         Route::post('/update/{id}', [ArticleController::class, 'update'])
-        ->name('admin.posts.update')
-        ->whereNumber('id');
+            ->name('admin.posts.update')
+            ->whereNumber('id');
         Route::delete('/destroy/{id}', [ArticleController::class, 'destroy'])
-        ->name('admin.posts.destroy')
-        ->whereNumber('id');
+            ->name('admin.posts.destroy')
+            ->whereNumber('id');
     });
 });
-

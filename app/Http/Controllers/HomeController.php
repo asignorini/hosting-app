@@ -17,8 +17,4 @@ class HomeController extends Controller
     public function contact() {
         return view('contact');
     }
-
-    public function login() {
-        return view('login');
-    }
 }

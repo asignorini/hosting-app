@@ -26,7 +26,7 @@
                 <td>{{$article->category->category_name}}</td>
                 <td>{{$article->created_at}}</td>
                 <td>
-                    <a href="{{ route('admin.posts.edit', ['id' => $article->article_id]) }}" class="btn btn-warning">Modificar</a>
+                    <a href="{{ route('admin.posts.edit', ['id' => $article->article_id]) }}" class="btn btn-warning">Editar</a>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModalCenter{{$article->article_id}}">
                         Eliminar
                     </button>

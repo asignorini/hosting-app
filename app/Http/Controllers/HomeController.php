@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Article;
 
 class HomeController extends Controller
 {
@@ -11,7 +12,12 @@ class HomeController extends Controller
     }
 
     public function blog() {
-        return view('blog');
+        $articles = Article::all();
+        $randomPosts = Article::inRandomOrder()->take(5)->get();
+        return view('blog', [
+            'posts' => $articles,
+            'randomPosts' => $randomPosts
+        ]);
     }
     
     public function contact() {

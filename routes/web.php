@@ -18,9 +18,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Home Routes
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
-Route::get('/contacto', [HomeController::class, 'contact'])->name('contact');
+Route::get('/', [HomeController::class, 'index'])
+->name('home');
+Route::get('/blog', [HomeController::class, 'blog'])
+->name('blog');
+Route::get('/contacto', [HomeController::class, 'contact'])
+->name('contact');
+Route::get('blog/{id}', [ArticleController::class, 'show'])
+->name('article')
+->whereNumber('id');
 
 // Auth Routes
 Route::get('/formLogin', [AuthController::class, 'formLogin'])->name('auth.formLogin');
@@ -31,9 +37,6 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', [AdminController::class, 'index'])
     ->name('admin.index')
-    ->middleware('auth');
-    Route::get('/profile', [AdminController::class, 'profile'])
-    ->name('admin.profile')
     ->middleware('auth');
     Route::group(['prefix' => 'posts'], function () {
         Route::get('/create', [ArticleController::class, 'create'])

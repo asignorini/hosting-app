@@ -1,0 +1,1 @@
+<h2>Articulo seleccionado</h2>

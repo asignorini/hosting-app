@@ -19,6 +19,8 @@ class CreateArticlesTable extends Migration
             $table->string('article_title', 100);
             $table->string('article_description', 200);
             $table->string('article_text', 2500);
+            $table->string('article_image')->nullable();
+            $table->string('article_image_alt')->nullable();
         });
     }
 

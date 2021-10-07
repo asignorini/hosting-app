@@ -31,9 +31,6 @@
                         <a class="nav-link" href="{{ route('admin.index') }}">Publicaciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.profile') }}">Perfil</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('admin.posts.create') }}">Crear post</a>
                     </li>
                     <li class="nav-item">

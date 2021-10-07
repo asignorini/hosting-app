@@ -27,11 +27,11 @@
                 <td>{{$article->created_at}}</td>
                 <td>
                     <a href="{{ route('admin.posts.edit', ['id' => $article->article_id]) }}" class="btn btn-warning">Modificar</a>
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModalCenter">
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModalCenter{{$article->article_id}}">
                         Eliminar
                     </button>
                     <!-- Modal -->
-                    <div class="modal fade" id="deleteModalCenter" tabindex="-1" role="dialog" aria-labelledby="deleteModalCenterTitle" aria-hidden="true">
+                    <div class="modal fade" id="deleteModalCenter{{$article->article_id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalCenterTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">

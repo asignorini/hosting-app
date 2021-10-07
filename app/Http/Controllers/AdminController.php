@@ -14,8 +14,4 @@ class AdminController extends Controller
             'articles' => $articles
         ]);
     }
-
-    public function profile() {
-        return view('admin.profile');
-    }
 }

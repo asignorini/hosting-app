@@ -39,7 +39,7 @@ class ArticleSeeder extends Seeder
                 'article_description'   => 'Este es un post de prueba ejecutado a traves de un seeder',
                 'article_text'          => 'Texto de relleno para el post de prueba',
                 'user_id'               => '2',
-                'category_id'           => '5',
+                'category_id'           => '3',
                 'created_at'            => date('Y-m-d H:i:s'),
                 'updated_at'            => date('Y-m-d H:i:s'),
             ],

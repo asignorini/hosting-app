@@ -4,6 +4,10 @@ li {
     list-style: none;
 }
 
+ul {
+    padding: 0!important;
+}
+
 *:hover {
     transition: 0.5s all ease;
 }
@@ -25,7 +29,7 @@ h1 {
 }
 
 .section-padding-top {
-    padding-top: 10rem;
+    padding-top: 5rem;
 }
 
 /*NAV*/

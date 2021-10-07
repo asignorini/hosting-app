@@ -26,7 +26,8 @@ class AuthController extends Controller
     public function logout() {
         Auth::logout();
 
-        return redirect()->route('auth.formLogin')
+        return redirect()
+        ->route('auth.formLogin')
         ->with('message.success', 'Sesión cerrada con éxito. ¡Te esperamos de nuevo!');
     }
 }

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-
+@section('title', 'Blog')
 
 @section('content')
 <section class="container section-padding-top blog-section">

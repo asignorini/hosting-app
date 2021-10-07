@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Administrador | Crear post')
+
 @section('content')
 <section class="container">
   <h2 class="my-5">Crear nuevo post</h2>
@@ -27,7 +29,7 @@
       @enderror
     </div>
     <div class="form-group">
-      <label for="article-category">Categoría</label>
+      <label for="article_category">Categoría</label>
       <select name="category_id" id="article_category" class="form-control">
         <option value="">Elije una categoría</option>
         @foreach($categories as $category)

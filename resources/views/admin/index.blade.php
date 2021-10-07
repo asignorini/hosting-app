@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Administrador | Inicio')
+
 @section('content')
 <section class="container">
     <h2 class="mt-5 mb-3">Publicaciones del blog</h2>
@@ -31,11 +33,11 @@
                         Eliminar
                     </button>
                     <!-- Modal -->
-                    <div class="modal fade" id="deleteModalCenter{{$article->article_id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalCenterTitle" aria-hidden="true">
+                    <div class="modal fade" id="deleteModalCenter{{$article->article_id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalCenterTitle{{$article->article_id}}" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="deleteModalCenterTitle">Eliminar artículo</h5>
+                                    <h5 class="modal-title" id="deleteModalCenterTitle{{$article->article_id}}">Eliminar artículo</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>

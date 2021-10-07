@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Inicio')
+
 @section('content')
 <section class="index-header">
     <div class="container h-100">
@@ -131,7 +133,7 @@
                         <h4 class="mb-0">Advance Hosting</h4>
                         <small>En oferta - Ahórrate 50%</small>
                     </li>
-                    <li class="text-center mb-4"">
+                    <li class="text-center mb-4">
                         <p class=" plan-price"><span class="dolar-price">$</span>700</p>
                         <p class="text-muted">/por mes</p>
                     </li>

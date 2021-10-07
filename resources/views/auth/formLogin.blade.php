@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Login')
+
 @section('content')
 <section class="container form-login">
     <div class="row justify-content-between align-items-center header-row">
@@ -12,7 +14,7 @@
                 @csrf
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelpId" value="{{ old('email') }}">
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="email" value="{{ old('email') }}">
                     @error('email')
                     <div class="text-danger">{{ $message }}</div>
                     @enderror

@@ -213,8 +213,8 @@ footer a {
 .blog-section .post {
     padding: 2rem;
     border-radius: 10px;
-    background: bisque;
     margin-bottom: 3rem;
+    border: 1px solid lightgrey;
 }
 
 .blog-section .post h3, .blog-section .post p{

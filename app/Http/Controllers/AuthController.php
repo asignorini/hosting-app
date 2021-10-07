@@ -17,9 +17,13 @@ class AuthController extends Controller
             'password'  => ['required'],
         ]);
         if(!Auth::attempt($credentials)) {
-            return redirect()->route('auth.formLogin')->withInput();
+            return redirect()
+            ->route('auth.formLogin')
+            ->withInput()
+            ->with('message.error', 'Las credenciales ingresadas son incorrectas');
         }
-        return redirect()->route('admin.index')
+        return redirect()
+        ->route('admin.index')
         ->with('message.success', 'Bienvenido al panel de administracion.');
     }
 

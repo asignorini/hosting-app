@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title')</title>
+    <title> Hostingar | @yield('title')</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url('css/styles.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,6 +59,10 @@
         @if(Session::has('message.success'))
         <div class="alert alert-success container mt-3 text-center">
             {{ Session::get('message.success') }}
+        </div>
+        @elseif(Session::has('message.error'))
+        <div class="alert alert-danger container mt-3 text-center">
+            {{ Session::get('message.error') }}
         </div>
         @endif
         @yield('content')

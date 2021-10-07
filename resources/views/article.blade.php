@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Artículo')
+
 @section('content')
 
 <section class="container section-padding-top text-center">

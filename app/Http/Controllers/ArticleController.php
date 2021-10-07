@@ -40,7 +40,7 @@ class ArticleController extends Controller
             'article_description'   => 'required',
             'article_text'          => 'required',
             'category_id'           => 'required',
-            'article_image'         => 'image|mimes:jpeg,png,jpg,gif',
+            'article_image'         => 'nullable|image|mimes:jpeg,png,jpg,gif',
         ]);
 
         if ($request->hasFile('article_image')) {
@@ -62,7 +62,7 @@ class ArticleController extends Controller
             'article_description'   => 'required',
             'article_text'          => 'required',
             'category_id'           => 'required',
-            'article_image'         => 'image|mimes:jpeg,png,jpg,gif',
+            'article_image'         => 'nullable|image|mimes:jpeg,png,jpg,gif',
         ]);
 
         $data = $request->input();
@@ -71,7 +71,7 @@ class ArticleController extends Controller
         if ($request->hasFile('article_image')) {
             $file = $request->file('article_image');
             $imageName = time() . "." . $file->clientExtension();
-            $file->storeAs('img', $data['article_image'], 'public');
+            $file->storeAs('img', $imageName, 'public');
             $data['article_image'] = $imageName;
             $oldImage = $article->article_image;
         }
@@ -79,12 +79,12 @@ class ArticleController extends Controller
         $article->update($data);
 
         if($request->hasFile('article_image')){
-            unlink(public_path('storage/img' . $oldImage));
+            unlink(public_path('storage/img/' . $oldImage));
         }
 
         return redirect()
             ->route('admin.index')
-            ->with('message.success', 'El post' . $article->article_title . 'fue modificado correctamente.');
+            ->with('message.success', 'El post ' . $article->article_title . ' fue modificado correctamente.');
     }
 
     public function destroy($id)

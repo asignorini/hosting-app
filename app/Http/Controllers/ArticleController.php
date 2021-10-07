@@ -14,7 +14,8 @@ class ArticleController extends Controller
     public function show($id)
     {
         $post = Article::findOrFail($id);
-        return view('article', ['article' => $post]);
+        $category = Category::findOrFail($post->category_id);
+        return view('article', ['article' => $post, 'category' => $category]);
     }
 
     public function create()
@@ -96,6 +97,6 @@ class ArticleController extends Controller
         }
         return redirect()
         ->route('admin.index')
-        ->with('message.success', 'El post' . $article->article_title . 'ha sido eliminado');
+        ->with('message.success', 'El post ' . $article->article_title . ' ha sido eliminado');
     }
 }

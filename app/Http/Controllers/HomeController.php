@@ -19,8 +19,4 @@ class HomeController extends Controller
             'randomPosts' => $randomPosts
         ]);
     }
-    
-    public function contact() {
-        return view('contact');
-    }
 }

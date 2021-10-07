@@ -47,9 +47,6 @@
                         <a class="nav-link" href="{{ route('blog') }}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact') }}">Contacto</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('auth.formLogin') }}">Ingresar</a>
                     </li>
                     @endauth
@@ -93,9 +90,6 @@
                     <ul class="p-0 pl-5 border-left">
                         <li class="mb-3">
                             <a href="{{ route('blog') }}">Blog</a>
-                        </li>
-                        <li class="mb-3">
-                            <a href="{{ route('contact') }}">Contacto</a>
                         </li>
                     </ul>
                 </li>

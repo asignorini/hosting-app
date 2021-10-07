@@ -22,8 +22,6 @@ Route::get('/', [HomeController::class, 'index'])
 ->name('home');
 Route::get('/blog', [HomeController::class, 'blog'])
 ->name('blog');
-Route::get('/contacto', [HomeController::class, 'contact'])
-->name('contact');
 Route::get('blog/{id}', [ArticleController::class, 'show'])
 ->name('article')
 ->whereNumber('id');

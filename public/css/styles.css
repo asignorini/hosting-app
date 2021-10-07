@@ -5,7 +5,7 @@ li {
 }
 
 ul {
-    padding: 0!important;
+    padding: 0;
 }
 
 *:hover {
@@ -29,7 +29,7 @@ h1 {
 }
 
 .section-padding-top {
-    padding-top: 5rem;
+    padding-top: 7rem;
 }
 
 /*NAV*/
@@ -136,7 +136,7 @@ footer a {
 }
 
 .plan-card {
-    padding: 40px;
+    padding: 40px!important;
     box-shadow: 0 8px 8px -1px rgb(0 0 0 / 15%);
     border-radius: 3px;
     border: 1px solid #ebebeb;
@@ -202,5 +202,46 @@ footer a {
     border-radius: 1rem;
 }
 
-/**************Admin Index**************************/
+/**************Blog**************************/
 
+.blog-section h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 5rem;
+}
+
+.blog-section .post {
+    padding: 2rem;
+    border-radius: 10px;
+    background: bisque;
+    margin-bottom: 3rem;
+}
+
+.blog-section .post h3, .blog-section .post p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.blog-section .post img, .random-post img {
+    border-radius: 10px;
+}
+
+.other-articles h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5rem;
+}
+
+.random-post {
+    border: 1px solid blanchedalmond;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.random-post li h4{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
